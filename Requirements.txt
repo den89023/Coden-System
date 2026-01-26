@@ -3,9 +3,9 @@
 # ==========================================
 
 # 1. CORE FILES REQUIRED:
-# - main.py (Execution)
 # - comand.py (Logic modules)
 # - data.json (Database)
+#Please create a folder and put all these files in one folder.
 
 # 2. PYTHON VERSION:
 # Compatible with Python 3.6 or higher.
