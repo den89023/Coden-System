@@ -1,0 +1,25 @@
+# ==========================================
+# CODEN SYSTEM - Project Requirements
+# ==========================================
+
+# 1. CORE FILES REQUIRED:
+# - main.py (Execution)
+# - comand.py (Logic modules)
+# - data.json (Database)
+
+# 2. PYTHON VERSION:
+# Compatible with Python 3.6 or higher.
+
+# 3. EXTERNAL DEPENDENCIES:
+# This project uses ONLY the Python Standard Library.
+# No external packages (pip install) are required to run CODEN.
+
+# 4. STANDARD MODULES USED:
+# - os     (Terminal control and file path resolution)
+# - json   (Data storage and retrieval)
+# - time   (System delays)
+# - random (Stochastic number generation)
+
+# ==========================================
+# NOTE: Ensure all three files are in the same folder before launch.
+# ==========================================
