@@ -1,7 +1,8 @@
 
-
 CODEN SYSTEM: Technical Overview
-Please create a folder and put all these files in one folder.
+
+Please create a folder and put all these files in one folder
+
 1. Introduction
 CODEN is a modular terminal-based environment built for data processing and arithmetic automation. The system operates using a continuous command loop, maintaining a clean workspace through automated interface refreshing.
 
