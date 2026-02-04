@@ -3,7 +3,7 @@ import random
 import os
 import json
 
-usercode = "eror"
+
 print("...")
 time.sleep(1.5)
 
@@ -16,43 +16,45 @@ def refresh():
     print("  --- CODEN SYSTEM   ---     ")
     print("  --  Author DEN89023  ---    ")
     print("==========================")
-
+startlista = []
 matha = []
 randoma = []
 spama = []
-userdata = [matha, randoma, spama]
+userdata = [matha, randoma, spama, startlista]
 
 clear()
 refresh()
 
-
 def load_data():
-    global matha, randoma, spama, userdata
+    global matha, randoma, spama, userdata, startlista 
     try:
         with open("data.json", "r") as f:
             loaded = json.load(f)
             matha = loaded.get("math", [])
             randoma = loaded.get("random", [])
             spama = loaded.get("spam", [])
-            userdata = [matha, randoma, spama]
+            startlista  = loaded.get("spam", [])
+            userdata = [matha, randoma, spama, startlista]
     except FileNotFoundError:
-        print("eror5")
-
+        print("coden.data.load-data.eror-data loading error")
 
 def save_data():
    
     all_data = {
         "math": matha,
         "random": randoma,
+        "list":startlista ,
         "spam": spama
+        
     }
     with open("data.json", "w") as f:
         json.dump(all_data, f)
-
 def data():
+    global data_map
     data_map = {
         "math": matha,
         "random": randoma,
+        "list":startlista ,
         "spam": spama,
         "all": userdata
     }
@@ -67,7 +69,7 @@ def data():
         refresh()
         time.sleep(0.5)
         print(data_map[code])
-        input("coden.userdat." ,code, ".zakrati.>")
+        input("coden.userdat." ,code, ".Close.>")
         clear()
         refresh()
     else:
@@ -75,6 +77,148 @@ def data():
         time.sleep(1)
         clear()
         refresh()
+
+def lista():
+    global startlista 
+    startlist = startlista 
+    work = True 
+    cod = input('coden.list.')
+    clear()
+    refresh()
+    while work:
+        cod = input('coden.list.')
+        clear()
+        refresh()
+        if cod == 'del':
+            try:
+                codsuba = input('coden.list.del.op--(Delete all atv delete specific item atv2)->')
+                clear()
+                refresh()
+                if codsuba == 'atv':
+                    codsuba2 = input(f'coden.list.del.op({codsuba}).[If you agree, write yes and all elements will be deleted or write X]->')
+                    clear()
+                    refresh()
+                    if codsuba2 == 'yes':
+                        startlist = []
+                    elif codsuba2 == 'x':
+                       continue
+                elif codsuba == 'atv2':
+                   idex =input(f'coden.list.del.op({codsuba}).Name(')
+                   clear()
+                   refresh()
+                   codsuba3 = input(f'coden.list.del.op({codsuba}).index({idex}).(Are you sure[Answer yes or x])')
+                   clear()
+                   refresh()
+                   if codsuba3 == 'yes':
+                       startlist.remove(idex)
+                       save_data()
+                       continue
+                   elif codsuba == 'x':
+                       continue
+                       
+            except ValueError:
+                print('eror.functions.dell->Invalid Name or software error')
+                time.sleep(2)
+                clear()
+                refresh()
+                continue
+        if cod == 'svd':
+            # Просмотр списка
+            print(f"Current list: {startlist}") # Выводим сам список для удобства
+            input('&.--Type any character to exit--.& <---> ')
+            clear()
+            refresh()
+            continue
+
+        elif cod == 'add':
+            try:
+                val_input = input('coden.list.add.name-> ')
+                clear()
+                refresh()
+                
+                dtype = input('coden.list.add.Datatype (str/int/float/bool)-> ')
+                clear()
+                refresh()
+
+                # Конвертация типа данных
+                if dtype == 'int':
+                    final_value = int(val_input)
+                elif dtype == 'float':
+                    final_value = float(val_input)
+                elif dtype == 'bool':
+                    if val_input.lower() in ['false', '0', '']:
+                        final_value = False
+                    else:
+                        final_value = True
+                else:
+                    final_value = str(val_input)
+                
+                startlist.append(final_value)
+                save_data()
+                print('---Successfully Added---')
+                time.sleep(1.5)
+                clear()
+                refresh()
+
+            except ValueError:
+                print('---Error: Type Mismatch---')
+                time.sleep(1.5)
+                clear()
+                refresh()
+
+        elif cod == 'edit':
+            try:
+                sub_cod = input('coden.list.edit.') 
+                clear()
+                refresh()
+                
+                if sub_cod == 'relist':
+                    Name = input('coden.list.edit.relist.Name-->')
+                    clear()
+                    refresh()
+                    
+                    index_str = input('coden.list.edit.relist.index-->')
+                    index = int(index_str) 
+                    clear()
+                    refresh()
+                    
+                    Dattype = input('coden.list.edit.relist.Datatype.')
+                    clear()
+                    refresh()
+                    
+                    # Проверка индекса
+                    if 0 <= index < len(startlist):
+                        if Dattype == 'int':
+                            startlist[index] = int(Name)
+                        elif Dattype == 'float':
+                            startlist[index] = float(Name)
+                        elif Dattype == 'bool':
+                            startlist[index] = Name.lower() not in ['false', '0', '']
+                        else:
+                            startlist[index] = str(Name)
+                        
+                        save_data() # Сохраняем после редактирования
+                        print('---Successfully Edited---')
+                    else:
+                        print('---Error: Index out of range---')
+                    
+                    time.sleep(1.5)
+                    clear()
+                    refresh()
+                    
+            except Exception:
+                print('---Error: Invalid input---')
+                time.sleep(1.5)
+                clear()
+                refresh()
+
+        elif cod == 'x':
+            work = False
+        
+        else:
+            clear()
+            refresh()
+            continue
 
 def math():
     otv = input("coden.math.")
@@ -234,35 +378,33 @@ def prant():
     time.sleep(1)
     return per
 
+commands = {
+    "print": prant,
+    "random": randin,
+    "list": lista,
+    "spam": spam,
+    "math": math,
+    "userdat": data
+}
+
 while True:
     load_data()
     code = input("coden.")
-    if code == "print":
+
+    if code in commands:
         clear()
         refresh()
-        prant()
-    elif code == "random":
-        clear()
-        refresh()
-        randin()
-    elif code == "spam":
-        clear()
-        refresh()
-        spam()
-    elif code == "math":
-        clear()
-        refresh()
-        math()
-    elif code == "userdat":
-        clear()
-        refresh()
-        data()
+        commands[code]()  # Вызываем функцию из словаря по ключу
     elif code == "func":
         clear()
         refresh()
-        print(" coden.func.time,random,sleep,print,mi,func,userdat")
+        print(" coden.func.>--time,random,sleep,print,mi,func,userdat,list")
     else:
         print("such command does not exist")
+        time.sleep(1.5)
+        clear()
+        refresh()
 
  
+
 
