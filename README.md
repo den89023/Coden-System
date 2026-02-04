@@ -25,6 +25,20 @@ The system prompts for a minimum and maximum value.
 
 The generated result is automatically stored in the session history.
 
+
+
+ Module Documentation: lista() Function
+The lista module is a core component of the system designed for high-level management of dynamic arrays. It provides a dedicated environment for data manipulation with built-in validation and persistence.
+
+Key Functional Features
+Type-Strict Data Entry: Supports adding elements as str, int, float, or bool.
+
+Dynamic Index Editing: Allows modification of existing records with real-time type casting.
+
+Multi-Tier Deletion: Integrated safety protocols for both targeted and global data removal.
+
+State Persistence: Synchronizes all modifications with the global startlista variable and the local JSON database via save_data().
+
 2.3 Text Processor (spam)
 A utility designed for automated text repetition.
 
