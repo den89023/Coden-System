@@ -140,7 +140,7 @@ def lista():
                 clear()
                 refresh()
 
-                # Конвертация типа данных
+                
                 if dtype == 'int':
                     final_value = int(val_input)
                 elif dtype == 'float':
@@ -394,7 +394,7 @@ while True:
     if code in commands:
         clear()
         refresh()
-        commands[code]()  # Вызываем функцию из словаря по ключу
+        commands[code]()  
     elif code == "func":
         clear()
         refresh()
@@ -406,5 +406,6 @@ while True:
         refresh()
 
  
+
 
 
