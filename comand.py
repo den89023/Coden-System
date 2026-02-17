@@ -66,7 +66,7 @@ def data():
         print(f"coden.userdat.{code}")
         time.sleep(0.5)
         clear()
-        refresh()
+        refresh() #
         time.sleep(0.5)
         print(data_map[code])
         input("coden.userdat." ,code, ".Close.>")
@@ -123,8 +123,8 @@ def lista():
                 refresh()
                 continue
         if cod == 'svd':
-            # Просмотр списка
-            print(f"Current list: {startlist}") # Выводим сам список для удобства
+             Просмотр списка
+            print(f"Current list: {startlist}") 
             input('&.--Type any character to exit--.& <---> ')
             clear()
             refresh()
@@ -186,7 +186,7 @@ def lista():
                     clear()
                     refresh()
                     
-                    # Проверка индекса
+                    
                     if 0 <= index < len(startlist):
                         if Dattype == 'int':
                             startlist[index] = int(Name)
@@ -197,7 +197,7 @@ def lista():
                         else:
                             startlist[index] = str(Name)
                         
-                        save_data() # Сохраняем после редактирования
+                        save_data() 
                         print('---Successfully Edited---')
                     else:
                         print('---Error: Index out of range---')
@@ -406,6 +406,7 @@ while True:
         refresh()
 
  
+
 
 
 
