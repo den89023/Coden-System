@@ -81,6 +81,12 @@ Refresh Logic: The terminal clears and re-renders the header after every signifi
 5. Installation and Execution
 To ensure the system functions correctly, you must download the entire project folder as a single unit.
 
+6.mod-The mod is a very large function, so to see it, we've split it into a file.
+
+7.cd - The function has not yet been finalized; it allows you to select a directory, but for now it is pointless; the function is in the testing stage.
+
+8.prcod This function allows you to display a drawn coin using symbols and you will find out your Python, kernel and your RAM load.
+
 Download: Click the green Code button and select Download ZIP.
 
 Extraction: Unpack the ZIP archive to a dedicated folder on your computer.
