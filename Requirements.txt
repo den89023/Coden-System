@@ -19,6 +19,7 @@
 # - json   (Data storage and retrieval)
 # - time   (System delays)
 # - random (Stochastic number generation)
+# -platform (To view RAM usage)
 
 # ==========================================
 # NOTE: Ensure all three files are in the same folder before launch.
