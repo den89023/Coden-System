@@ -359,7 +359,7 @@ def File():
     clear()
     refresh()
     
-    if otv == f'{GREEN}yes{RESET}' or otv == 'mod':
+    if otv == 'yes':
         filepath = input('coden.path_to_file -> ')
         if os.path.exists(filepath):
             namemod = input(f'Name for log -> ')
@@ -587,7 +587,7 @@ commands = {
     "math": math,
     "cd": path_start,
     "userdat": data,
-    "test": File,
+    "mod": File,
     "prcod":print_fetch
 }
 
@@ -620,6 +620,7 @@ while True:
 
 
  
+
 
 
 
