@@ -1,0 +1,25 @@
+Modification is a big feature, the ability to create your own 
+
+This is an example of code. How can you write? You can write code with any libraries. In addition, if you import the file where the script itself
+is located, an error will occur. Plus, you need to go and install the library if you use your modification. Here is an example of the simplest modification.
+
+def hello_func():
+    print("Hello World!")
+
+# The most important thing is to add commands to the dictionary:
+commands['hello'] = hello_func
+
+Let's imagine that we created a mod, you write mod in the terminal and you get this
+coden.install_mod (yes/del) -> 
+We need to download it, please answer yes.
+coden.path_to_file -> 
+Now the important point is that you need to write the file path, as I was already told, it is recommended that the file be in the folder
+of the Mod that you like in the same file with the script, but in turn the path can be any
+Name for log -> 
+This is a very convenient function. You can name the file whatever you want, it won't affect the file; it won't change its name. This is the 
+definition of the file. I recommend naming it normally so that it can be easily found and deleted. This doesn't change the name of the file itself.
+You will need to reboot the system and enter the command that you set in the code itself. You can still delete
+
+The mod is removed when you go to the functions menu. You need to select the uninstall location. 
+After that, you'll see all the paths to your mod files; you can copy one of them.
+Make sure this is the mod you're deleting and enter the path.
