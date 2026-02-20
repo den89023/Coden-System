@@ -121,7 +121,6 @@ def print_fetch():
     ]
 
     print("\n")
-    # Вывод в две колонки
     max_rows = max(len(coin), len(sys_info))
     for i in range(max_rows):
         left = coin[i] if i < len(coin) else " " * 45
@@ -620,6 +619,7 @@ while True:
 
 
  
+
 
 
 
