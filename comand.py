@@ -4,7 +4,6 @@ import os
 import json
 import platform
 
-
 RESET = "\033[0m"
 BOLD = "\033[1m"
 UNDERLINE = "\033[4m"
@@ -68,12 +67,6 @@ mods_data = []
 
 clear()
 refresh()
-
-import platform
-import os
-import sys
-import psutil 
-
 
 GOLD = "\033[38;5;220m"    
 DARK_GOLD = "\033[38;5;172m" 
@@ -577,7 +570,6 @@ def prant():
 #---------------------------------
 
 # The Essential Dictionary of Command Management
-
 commands = {
     "print": prant,
     "random": randin,
@@ -616,13 +608,3 @@ while True:
         time.sleep(1.5)
         clear()
         refresh()
-
-
- 
-
-
-
-
-
-
-
